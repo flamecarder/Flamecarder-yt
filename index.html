@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire Payment Demo</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:#020506;color:#fff}
+body{overflow-x:hidden}
+.top{height:72px;padding:25px 18px 0;border-bottom:1px solid #15201d;font-weight:800;letter-spacing:.2px;font-size:16px}
+.top span{color:#21ff88}
+.actions{position:absolute;right:16px;top:82px;display:flex;gap:10px}
+.pill{padding:9px 13px;border-radius:20px;border:1px solid #15563d;background:#062217;color:#72ffb4;font-size:10px;font-weight:800}
+.pill.purple{border-color:#7b28d8;background:linear-gradient(90deg,#3810b9,#cf29f2);color:white}
+.wrap{max-width:680px;margin:auto;padding:12px 26px 35px}
+.kicker{text-align:center;color:#20ff88;font-size:12px;font-weight:900;letter-spacing:2px;margin-top:0}
+h1{text-align:center;font-size:34px;margin:18px 0 12px;line-height:1.05}
+.sub{text-align:center;color:#7d8584;font-size:14px;margin-bottom:45px}
+.panel{border:1px solid #19352c;border-radius:26px;padding:26px;background:
+radial-gradient(circle at 15% 30%,rgba(0,255,130,.08),transparent 38%),
+radial-gradient(circle at 90% 75%,rgba(150,0,255,.10),transparent 40%),
+linear-gradient(145deg,#00120c,#080611);box-shadow:0 0 35px rgba(0,255,130,.025)}
+.selected{height:60px;border:1px solid #17342c;border-radius:18px;padding:0 17px;display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;background:rgba(0,0,0,.18)}
+.selected small{color:#79827f;font-size:10px}.selected b{font-size:16px}
+.qrbox{width:300px;height:300px;background:#fff;border-radius:24px;margin:0 auto 28px;display:flex;align-items:center;justify-content:center}
+.qr{width:215px;height:215px;border:10px dotted #111;position:relative;background:repeating-linear-gradient(45deg,#111 0 5px,#fff 5px 10px)}
+.qr:before,.qr:after{content:"";position:absolute;width:48px;height:48px;background:#fff;border:8px solid #111;top:-5px}
+.qr:before{left:-5px}.qr:after{right:-5px}
+.qrlabel{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#13b96b;font-weight:900;font-size:22px}
+.upi{text-align:center;margin-bottom:28px}.upismall{color:#6f7775;font-size:11px;margin-bottom:10px}.upiid{color:#20ff88;font-size:17px;font-weight:800}
+.notice{border:1px solid #463718;border-radius:15px;padding:17px;background:rgba(60,35,10,.12);color:#999;font-size:12px;line-height:1.55;margin-bottom:26px}
+.notice strong{color:#aaa}
+label{display:block;color:#9b9f9e;font-size:11px;font-weight:800;margin-bottom:10px}
+input{width:100%;height:56px;border-radius:15px;border:1px solid #20302d;background:#030707;color:white;padding:0 18px;font-size:14px;outline:none}
+input:focus{border-color:#20ff88}
+.greenbtn{width:100%;height:55px;border:0;border-radius:15px;background:#20f47d;color:#001b0d;font-weight:900;margin-top:17px;cursor:pointer}
+.process{margin-top:28px;border:1px solid #27134b;border-radius:20px;background:rgba(28,8,52,.38);padding:25px}
+.process h3{color:#d18aff;font-size:13px;letter-spacing:1px;margin:0 0 20px}
+.step{display:flex;gap:10px;color:#87898d;font-size:12px;margin:15px 0;line-height:1.4}.step i{font-style:normal;color:#20ff88;font-weight:900}
+.ig{display:block;width:100%;height:47px;border-radius:13px;margin-top:23px;background:linear-gradient(90deg,#8a25ff,#db3ef0);color:#fff;text-align:center;line-height:47px;text-decoration:none;font-size:11px;font-weight:900}
+.warn{text-align:center;color:#666;font-size:10px;margin-top:17px}
+@media(max-width:420px){.actions{display:none}.wrap{padding-left:26px;padding-right:26px}h1{font-size:32px}.selected b{font-size:15px}.qrbox{width:300px;height:300px;max-width:100%}}
+</style>
+</head>
+<body>
+<div class="top">FREE FIRE <span>DIAMOND TOP UP CENTER</span></div>
+<div class="actions"><div class="pill">🔊 SOUND</div><div class="pill #800080">🎁 DAILY SPIN</div></div>
+<main class="wrap">
+<div class="kicker">PAYMENT &amp; VERIFICATION</div>
+<h1>COMPLETE YOUR PAYMENT</h1>
+<div class="sub">Select a package first, then follow the payment verification steps.</div>
+<section class="panel">
+<div class="selected" <small>SELECTED PACKAGE</small>
+<b style="color: #20ff88;">DIAMOND · 50,000 CC ·<br> Price            
+ ₹499</b>.
+</div>
+<img src="qr.png" style="width: 60%; margin: auto; display: block;">.
+
+
+
+</></></>
+<div class="upi"><div class="upismall">UPI ID</div><div class="upiid">flamecarder@nyes</div>
+<div class="notice" style="color: red;">><strong>IMPORTANT:</strong> processes  pahle Qr ka screenshot lo aur kisi bhi UPi App se payment karke uska UTR CoPy karo Fir niche us Utr ko varify karo agar payment real hogi to automatic aapko Download ka option aayga wha se card download kar le  </div>
+<label>ENTER PAYMENT TRANSACTION REFERENCE</label>
+<input id="ref" maxlength="20" placeholder="Enter UTR reference">
+<button class="greenbtn" onclick="verify()">VERIFY Payment</button>
+<div class="process">
+<h3>VERIFICATION PROCESS</h3>
+<div class="step"><i>1.</i><span>SCREENSHOT QR GO TO UPI APPS.</span></div>
+<div class="step"><i>2.</i><span>Pay And copy UTR Id .</span></div>
+<div class="step"><i>3.</i><span>Enter a test reference number.</span></div>
+<div class="step"><i>4.</i><span>Payment verification result will appear on screen.</span></div>
+<a class="ig" href="#" onclick="return false">OPEN CARD DETAILS</a>
+<div class="warn">Never share your UPI PIN, OTP, password or confidential banking information.</div>
+</div>
+</section>
+</main>
+<script>
+function verify(){
+ const r=document.getElementById('ref').value.trim();
+ if(!r){alert('Please enter a demo reference number.');return}
+ alert('Demo verification successful!\\nReference: '+r+'\\n\\nNo real payment was processed.');
+}
+</script>
+</body>
+</html>
